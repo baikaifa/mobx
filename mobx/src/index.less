@@ -1,0 +1,528 @@
+.ant-dropdown {
+  background: red;
+}
+
+@import "~antd/lib/style/themes/default.less";
+@import "./assets/less/home.less";
+
+:global(#root) {
+  height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+:global {
+  .ant-spin-container {
+    overflow: visible !important;
+  }
+}
+
+.confirmBtn {
+  width: 1000px;
+}
+
+//下面是修改全局的antd样式
+:global {
+  //第一次登陆录入人脸信息弹出框样式
+
+
+  //新建人脸弹出框下面的样式
+  .new_face_store_toast_0 {
+    position: relative;
+
+    .ant-modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .new_face_store_toast_0_logo {
+      width: 3px;
+      height: 20px;
+      background-image: url(./assets/img/standard_face_database/Rectangle.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 17px;
+    }
+
+    .ant-modal-body {
+      text-align: center;
+
+      .new_people_modal_desc_div {
+        height: 32px;
+      }
+
+      .choose_img_upload {
+        display: inline-block;
+        width: 470px;
+        height: 470px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+        border: 1px solid rgba(137, 207, 240, 0.3);
+        border: 1px solid #e8e8e8;
+        box-sizing: content-box;
+
+        .ant-upload-select-text {
+          width: 470px;
+          height: 470px;
+
+          .choose_img_A {
+            width: 470px;
+            height: 470px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .choose_img_upload_icon_choose_img_word_wrap {
+              .choose_img_upload_icon {
+                background-image: url(./assets/img/standard_face_database/plus.png);
+                width: 70px;
+                height: 70px;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+
+              .choose_img_word {
+                margin-top: 20px;
+                font-size: 16px;
+                font-family: PingFangSC-Medium, PingFang SC;
+                font-weight: 500;
+                color: rgba(0, 163, 255, 1);
+              }
+            }
+
+            .choose_img_wrap {
+              width: 470px;
+              height: 470px;
+
+              .choose_img_wrap_img {
+                width: 470px;
+                height: 470px;
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+          }
+        }
+      }
+
+      .new_face_input::placeholder {
+        color: rgba(132, 151, 189, 1);
+        font-size: 14px;
+        font-family: SourceHanSansCN-Normal, SourceHanSansCN;
+      }
+
+      .new_face_input {
+        display: inline-block;
+        width: 400px;
+        border-radius: 4px;
+        border: 1px solid rgba(226, 232, 244, 1);
+        color: rgba(82, 100, 136, 1);
+        font-size: 14px;
+      }
+    }
+
+    .ant-modal-footer {
+      width: 100%;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        button {
+          box-shadow: none;
+          text-shadow: none;
+        }
+
+        button:nth-child(1) {
+          border-radius: 4px;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          margin-left: 36px;
+          border: 1px solid rgba(230, 237, 250, 1);
+          color: #67758f;
+
+          &:hover {
+            border-radius: 4px;
+            border: 1px solid rgba(200, 210, 229, 1);
+            color: #3f495c;
+          }
+        }
+
+        button:nth-child(2) {
+          position: absolute;
+          background: rgba(0, 163, 255, 1);
+          border-radius: 4px;
+          margin-left: -36px;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0%);
+        }
+      }
+    }
+  }
+
+  //新建人脸库弹出框样式
+  .new_face_store_modal_wrap {
+    .ant-modal {
+      position: relative;
+    }
+
+    .ant-modal-content {
+      height: 160px;
+      width: 350px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+
+      .ant-modal-close-icon {
+        display: none;
+      }
+
+      .ant-modal-header {
+        border-bottom: none;
+        padding: 0;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        //   background: #000;
+
+        .ant-modal-title {
+          font-size: 16px;
+          font-family: PingFangSC-Medium, PingFang SC;
+          font-weight: 500;
+          color: rgba(51, 51, 51, 1);
+          position: absolute;
+          left: 20px;
+        }
+      }
+
+      .ant-modal-body {
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        //   background: blue;
+        .new_faceStore_toast_p_new_faceStore_toast_input_wrap {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .p {
+            height: 20px;
+            font-size: 14px;
+            font-family: PingFangSC-Medium, PingFangSC;
+            color: rgba(51, 51, 51, 1);
+            display: inline-block;
+          }
+
+          .new_faceStore_toast_input::placeholder {
+            color: #8497bd;
+          }
+
+          .new_faceStore_toast_input {
+            width: 232px;
+            height: 32px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f4ff;
+            background: transparent;
+            font-size: 14px;
+            font-family: SourceHanSansCN-Normal, SourceHanSansCN;
+            font-weight: 400;
+            color: rgba(82, 100, 136, 1);
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .ant-modal-footer {
+        border-top: none;
+        width: 100%;
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+
+          button:nth-child(1) {
+            border-radius: 4px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            margin-left: 36px;
+          }
+
+          button:nth-child(2) {
+            position: absolute;
+            background: rgba(0, 163, 255, 1);
+            border-radius: 4px;
+            margin-left: -36px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+          }
+        }
+      }
+    }
+
+    .new_face_store_modal_wrap_left_line {
+      width: 3px;
+      height: 20px;
+      background-image: url(./assets/img/standard_face_database/Rectangle.png);
+      position: absolute;
+      left: 0;
+      top: 17px;
+    }
+  }
+
+  //Zmage修改
+  #zmage {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  #zmageBackground {
+    width: 600px;
+    height: 600px;
+    opacity: 1 !important;
+    background: rgb(255, 255, 255) !important;
+    // border: 1px solid red!important;
+    // display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #f1f1f1 !important;
+    transform: translate(-50%, -50%);
+  }
+
+  .reload__2nJBf {
+    display: none;
+  }
+
+  #zmageControl {
+    display: none;
+  }
+
+  #zmageImage {
+    visibility: hidden;
+    width: 500px !important;
+    height: 500px !important;
+    transform: translate3d(-50%, -50%, 0px) translate3d(0px, 0px, 0px)
+      scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg) !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .delete_icon_class {
+    //叉号下面的样式改变
+    width: 18px;
+    height: 18px;
+    background-image: url("./assets/img/App/chahao1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  //给所有的modal弹出框添加×号样式
+  .ant-modal-close-x {
+    background-image: url(./assets/img/antd/close@2x.png) !important;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: center center;
+
+    svg {
+      display: none !important;
+    }
+  }
+  .upload_remind_icon {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    .ant-spin-dot-item {
+      width: 60px;
+      height: 60px;
+    }
+    .ant-spin-text {
+      margin-top: 60px;
+    }
+  }
+  .no_height {
+    .ant-modal-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px !important;
+      height: 300px !important;
+      margin-left: 50px;
+    }
+    .ant-modal-body {
+      width: 300px !important;
+      height: 300px !important;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .ant-modal-footer {
+      display: none !important;
+    }
+  }
+  .JUU0JUI4JThBJUU0JUJDJUEwJUU4JUE3JTg2JUU5JUEyJTkx {//上传视频的删除按钮不显示
+    .ant-upload-list-item-card-actions {
+      display: none;
+    }
+  }
+  .upload_photo {
+    .ant-modal-body {
+      height: 600px;
+    }
+    //给modal底部变换样式
+    .ant-modal-footer {
+      width: 100%;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        button {
+          box-shadow: none;
+          text-shadow: none;
+        }
+
+        // button:nth-child(1) {
+        //   border-radius: 4px;
+        //   position: absolute;
+        //   left: 50%;
+        //   transform: translate(-50%, 0%);
+        //   margin-left: 36px;
+        //   border: 1px solid rgba(230, 237, 250, 1);
+        //   color: #67758f;
+        //   display: none;
+        //   &:hover {
+        //     border-radius: 4px;
+        //     border: 1px solid rgba(200, 210, 229, 1);
+        //     color: #3f495c;
+        //   }
+        // }
+
+        button:nth-child(1) {
+          position: absolute;
+          background: rgba(0, 163, 255, 1);
+          border-radius: 4px;
+          margin-left: -36px;
+          position: absolute;
+          left: 50%;
+          display: none;
+          transform: translate(-50%, 0%);
+        }
+      }
+    }
+  }
+
+  .modal_comfirm {
+    .ant-modal-content {
+      width: 300px;
+      height: 162px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .ant-modal-confirm-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        //取消问号
+        .anticon {
+          > svg {
+            display: none;
+          }
+        }
+      }
+
+      .ant-modal-confirm-title {
+        //文字居中
+        width: auto;
+        text-align: left;
+      }
+
+      .ant-modal-confirm-content {
+        display: none;
+      }
+
+      //让内容居中
+      .ant-modal-confirm-body-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .ant-modal-confirm-btns {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-left: -9px;
+
+        button:nth-child(2) {
+          //确认按钮
+          box-shadow: none;
+          background-color: rgb(0, 163, 255);
+          border: rgb(0, 163, 255);
+        }
+      }
+    }
+  }
+}

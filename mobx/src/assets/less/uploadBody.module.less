@@ -1,0 +1,65 @@
+.outerWrap {
+  //宽高必须按照一定比例
+  // width: 115px;
+  // height: 175px;
+  width: 184px;
+  height: 280px;
+  background-image: url(../img/人体检索/h1@2x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  float: left;
+}
+.upload {
+  background: transparent !important;
+  border: none !important;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.plus {
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/人体检索/plus@2x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.describe {
+  width: 63px;
+  height: 20px;
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(0, 163, 255, 1);
+  letter-spacing: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+}
+#alternate_image_id {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  visibility: hidden;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+:global {
+  .ant-upload-list-item-list-type-text {
+    //不知道为何会弹出一个提示错误，先隐藏掉
+    display: none;
+  }
+}

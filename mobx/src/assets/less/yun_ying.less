@@ -1,0 +1,76 @@
+:global {
+  .yun_ying_ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+    // height: 100% !important;
+    // width: 100% !important;
+  }
+  .yun_ying_left {
+    text-align: center;
+    > * {
+      margin-top: 20px;
+    }
+    .rtmpVideo {
+      position: relative;
+      text-align: center;
+      margin-top: 0px;
+      .videoIcon {
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        bottom: 0px;
+        cursor: pointer;
+        display: none;
+      }
+      .videoIcon1 {
+        position: absolute;
+        z-index: 1000;
+        right: 0;
+        bottom: 0px;
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        background: red;
+        display: none;
+      }
+    }
+    .biggerVideo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 0px;
+    }
+    div {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .video-js0 {
+    width: 400px;
+    height: 300px;
+  }
+  .videoFather:hover {
+    //使用css使得子元素显示隐藏
+    .videoIcon {
+      display: block;
+    }
+    .videoIcon1 {
+      display: block;
+    }
+  }
+
+  .vjs-fluid {
+    padding-top: 0px !important;
+  }
+  .video-js1 {
+    width: 400px;
+    height: 830px;
+    z-index: 2000;
+  }
+}

@@ -1,0 +1,2582 @@
+@rate: 0.01; //某个内容最小宽度和最小高度的比率
+@width: 1920px; //设计图宽度是多少
+@height: 1080px; //设计图高度是多少
+//1rem=100px
+// @w:19.20%;//计算宽度百分比
+// @h:10.80%;//计算高度百分比
+:global {
+  // html {font-size: 625%; /*10 ÷ 16 × 100% = 62.5%*/}
+  .login_all {
+    width: 100%;
+    height: 100%;
+    // min-width: @width* @rate;
+    // min-height: @height* @rate;
+    min-width: 1100px;
+    min-height: 750px;
+    background: rgba(4, 128, 232, 1);
+    border: 1px solid rgba(151, 151, 151, 1);
+    // .nbce {
+    //   // width: 200px;
+    //   height: 100px;
+    //   position: absolute;
+    //   left: 50%;
+    //   transform: translate(-50%, 0%);
+    //   font-size: 36px;
+    // }
+    .login_left_right_wrap_wrap {
+      width: 100%;
+      height: 100%;
+      min-width: 1100px;
+      min-height: 750px;
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      // top: 50%;left: 50%;transform:translate(-50%,-50%);
+    }
+
+    .login_clause_wrapper {
+      width: 100%;
+      height: 100%;
+      min-width: 1100px;
+      min-height: 750px;
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      z-index: 3000;
+      .login_clause_wrapper_verify_word {
+        .login_clause_wrapper_verify_word(
+          800,
+          700,
+          36
+        ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+        .login_clause_wrapper_verify_word(@www,@hhh,@fff) {
+          width: @www / 100rem;
+          height: @hhh / 100rem;
+          min-width: @www / 1px * @rate;
+          min-height: @hhh / 1px * @rate;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: @fff / 100rem;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          background-color: #ffffff;
+          text-align: center;
+          padding: 100px;
+        }
+      }
+
+      .login_clause_wrapper_sh {
+        .login_clause_wrapper_sh(
+          100,
+          100,
+          220,
+          0
+        ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+        .login_clause_wrapper_sh(@www,@hhh,@lll,@ttt) {
+          width: @www / 100rem;
+          height: @hhh / 100rem;
+          min-width: @www / 1px * @rate;
+          min-height: @hhh / 1px * @rate;
+          position: relative;
+          left: @lll / 100rem;
+          top: @ttt / 100rem;
+          background-image: url(../img/Login/sh.jpg);
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .login_clause_wrapper_yes_btn {
+        margin-top: 0.5rem;
+        width: 3rem;
+        height: 0.5rem;
+      }
+
+      .login_clause {
+        // width: 1600px;
+        // height: 998px;
+        width: 1080px;
+        height: 798px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 1);
+        z-index: 1000;
+        .login_header {
+          width: 1080px;
+          height: 60px;
+          border-bottom: 1px solid #d9e2e8;
+          .login_header_p {
+            font-size: 18px;
+            font-family: PingFangSC-Medium, PingFangSC;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 1);
+            position: absolute;
+            left: 28px;
+            top: 17px;
+          }
+        }
+        .login_content {
+          width: 1080px;
+          height: 622px;
+          border-bottom: 1px solid #d9e2e8;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          .login_content_p1 {
+            width: 1020px;
+            font-size: 12px;
+            font-family: PingFangSC-Regular, PingFangSC;
+            font-weight: 400;
+            color: rgba(102, 102, 102, 1);
+            line-height: 24px;
+            position: relative;
+            left: 28px;
+            top: 12px;
+          }
+          .login_content_p2 {
+            width: 1020px;
+            font-size: 14px;
+            font-family: PingFangSC-Medium, PingFangSC;
+            font-weight: 500;
+            color: rgba(51, 51, 51, 1);
+            position: relative;
+            left: 28px;
+            top: 16px;
+          }
+          .login_content_p3 {
+            width: 1022px;
+            font-size: 12px;
+            font-family: PingFangSC-Regular, PingFangSC;
+            font-weight: 400;
+            color: rgba(102, 102, 102, 1);
+            position: relative;
+            left: 28px;
+            top: 14px;
+          }
+          .login_content_p4 {
+            width: 1022px;
+            font-size: 14px;
+            font-family: PingFangSC-Medium, PingFangSC;
+            font-weight: 500;
+            color: rgba(51, 51, 51, 1);
+            position: relative;
+            left: 28px;
+            top: 15px;
+          }
+          .login_content_p5 {
+            //多段文字
+
+            width: 1022px;
+            position: relative;
+            left: 28px;
+            top: 11px;
+            p {
+              width: 1022px;
+              font-size: 12px;
+              font-family: PingFangSC-Regular, PingFangSC;
+              font-weight: 400;
+              color: rgba(102, 102, 102, 1);
+              line-height: 24px;
+            }
+          }
+        }
+        .login_footer {
+          width: 1080px;
+          height: 114px;
+          position: relative;
+          .login_footer_btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 370px;
+            height: 54px;
+            background: rgba(0, 127, 255, 1);
+            border-radius: 4px;
+            font-size: 22px;
+            font-family: PingFangSC-Regular, PingFangSC;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .login_logo {
+      .login_logo(
+        190,
+        56,
+        30,
+        30
+      ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+      .login_logo(@www,@hhh,@lll,@ttt) {
+        width: @www / 100rem;
+        height: @hhh / 100rem;
+        min-width: @www / 1px * @rate;
+        min-height: @hhh / 1px * @rate;
+        position: absolute;
+        left: @lll / 100rem;
+        top: @ttt / 100rem;
+        background-image: url(../img/Login/编组@2x.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    //     .login_left_right_wrap_wrap {
+    //       .login_left_right_wrap_wrap(
+    //         1920,
+    //         1080,
+    // 0,0
+    //       ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+    //       .login_left_right_wrap_wrap(@www,@hhh,@lll,@ttt) {
+    //         width: @www / 100rem;
+    //         height: @hhh / 100rem;
+    //         width: 100%;
+    //         height: 100%;
+    //         min-width: ;
+    //         min-height:;
+    //         position: absolute;
+    //         left: @lll / 100rem;
+    //         top: @ttt / 100rem;
+    //         background-color: red;
+    //       }
+    //     }
+
+    .login_left_right_wrap {
+      width: 16rem;
+      height: 8rem;
+      min-width: 1600px * @rate;
+      min-height: 800px * @rate;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .login_left_part {
+        width: 9rem;
+        height: 8rem;
+        min-width: 900px * @rate;
+        min-height: 800px * @rate;
+        float: left;
+        background-image: url(../img/Login/登陆页配图.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        .login_left_part_word {
+          .login_left_part_word(
+            100,
+            337,
+            60,
+            36
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_left_part_word(@www,@hhh,@ttt,@fff) {
+            height: @hhh / 100rem;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            // left: @lll / 100rem;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            top: @ttt / 100rem;
+            font-size: @fff / 100rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+      .login_right_part {
+        width: 7rem;
+        height: 8rem;
+        min-width: 700px * @rate;
+        min-height: 800px * @rate;
+        float: left;
+        background: rgba(255, 255, 255, 1);
+        position: relative;
+        .face_login_div_tip {
+          position: absolute;
+          right: 50px;
+          top: 10px;
+        }
+        .face_login_div {
+          width: 0.6rem;
+          height: 0.6rem;
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-image: url(../img/Login/shua_face1.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        .face_login_div_hide {
+          border-style: solid;
+          border-width: 0px 0px 0.7rem 0.7rem;
+          border-color: transparent transparent white transparent;
+          width: 0px;
+          height: 0px;
+          transform: rotate(90deg);
+          position: absolute;
+          right: 0;
+          top: 0;
+          cursor: pointer;
+        }
+        .login_login_word1 {
+          .login_login_word1(
+            100,
+            100,
+            193,
+            154,
+            22
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_login_word1(@www,@hhh,@lll,@ttt,@fff) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            font-size: @fff / 100rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            color: rgba(0, 127, 255, 1);
+          }
+        }
+
+        .login_right_part_line1 {
+          .login_right_part_line1(
+            270,
+            8,
+            80,
+            193
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_line1(@www,@hhh,@lll,@ttt) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            background-image: url(../img/Login/line.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+        .login_login_word2 {
+          .login_login_word2(
+            100,
+            100,
+            463,
+            154,
+            22
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_login_word2(@www,@hhh,@lll,@ttt,@fff) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            font-size: @fff / 100rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+          }
+        }
+
+        .login_right_part_line2 {
+          .login_right_part_line2(
+            270,
+            8,
+            350,
+            200,
+            -8
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_line2(@www,@hhh,@lll,@ttt,@mmm) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            border-bottom: 1px solid #d9e2e8;
+            margin-top: @mmm / 100rem;
+          }
+        }
+        .login_right_part_input_wrap {
+          position: relative;
+          width: 5.41rem;
+          height: 0.9rem;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          top: 2rem;
+          .login_right_part_icon {
+            .login_right_part_icon(
+              16,
+              18,
+              10,
+              50
+            ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+            .login_right_part_icon(@www,@hhh,@lll,@ttt) {
+              width: @www / 100rem;
+              height: @hhh / 100rem;
+              min-width: @www / 1px * @rate;
+              min-height: @hhh / 1px * @rate;
+              position: absolute;
+              left: @lll / 100rem;
+              top: @ttt / 100rem;
+              background-image: url(../img/Login/people.png);
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+          }
+
+          .login_right_part_icon_password {
+            background-image: url(../img/Login/密码.png);
+          }
+          .login_right_part_input::-webkit-input-placeholder {
+            color: rgba(204, 222, 235, 1);
+            font-size: 0.18rem;
+          }
+          .login_right_part_input_div {
+            position: absolute;
+            width: 4.8rem;
+            height: 0.25rem;
+            left: 0.4rem;
+            top: 0.45rem;
+            // right: 0rem;
+            .login_right_part_input {
+              .login_right_part_input(
+                480,
+                25,
+                0,
+                0
+              ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+              .login_right_part_input(@www,@hhh,@lll,@ttt) {
+                width: @www / 100rem;
+                height: @hhh / 100rem;
+                min-width: @www / 1px * @rate;
+                min-height: @hhh / 1px * @rate;
+                position: absolute;
+                left: @lll / 100rem;
+                top: @ttt / 100rem;
+                border: 0; // 去除未选中状态边框
+                outline: none; // 去除选中状态边框
+                background-color: rgba(0, 0, 0, 0); // 透明背景
+              }
+            }
+          }
+
+          .login_right_part_border {
+            .login_right_part_border(
+              541,
+              0,
+              0
+            ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+            .login_right_part_border(@www,@hhh,@lll,) {
+              width: @www / 100rem;
+              height: @hhh / 100rem;
+              position: absolute;
+              left: @lll / 100rem;
+              bottom: 0rem;
+              border-bottom: 1px solid #d9e2e8;
+            }
+          }
+          .login_input_warning_username {
+            position: absolute;
+            bottom: -0.25rem;
+            left: 0rem;
+            font-size: 0.16rem;
+            font-family: PingFang SC, Helvetica Neue, Helvetica, STHeitiSC-Light,
+              WOL_SB, Segoe UI Semibold, Segoe UI, Tahoma, sans-serif;
+            font-weight: 400;
+            color: #fc6154;
+          }
+        }
+
+        .login_input_warning_password {
+          .login_input_warning_password(
+            80,
+            400,
+            16
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_input_warning_password(@lll,@ttt,@fff) {
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            font-size: @fff / 100rem;
+            font-family: PingFang SC, Helvetica Neue, Helvetica, STHeitiSC-Light,
+              WOL_SB, Segoe UI Semibold, Segoe UI, Tahoma, sans-serif;
+            font-weight: 400;
+            color: #fc6154;
+          }
+        }
+
+        .login_right_part_icon_password {
+          .login_right_part_icon_password(
+            16,
+            18,
+            91,
+            358
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_icon_password(@www,@hhh,@lll,@ttt) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            background-image: url(../img/Login/密码.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+
+        .login_right_part_input_password::-webkit-input-placeholder {
+          color: rgba(204, 222, 235, 1);
+          font-size: 14px;
+        }
+        .login_right_part_input_password {
+          .login_right_part_input_password(
+            480,
+            25,
+            121,
+            354
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_input_password(@www,@hhh,@lll,@ttt) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            border: 0; // 去除未选中状态边框
+            outline: none; // 去除选中状态边框
+            background-color: rgba(0, 0, 0, 0); // 透明背景
+          }
+        }
+        .login_right_part_border_password {
+          .login_right_part_border_password(
+            541,
+            2,
+            80,
+            388
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_border_password(@www,@hhh,@lll,@ttt) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            border-bottom: 2px solid #d9e2e8;
+          }
+        }
+
+        .login_right_part_input_warning {
+          .login_right_part_input_warning(
+            100,
+            0,
+            10,
+            16
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_input_warning(@hhh,@lll,@ttt,@fff) {
+            height: @hhh / 100rem;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            font-size: @fff / 100rem;
+            font-family: PingFang SC, Helvetica Neue, Helvetica, STHeitiSC-Light,
+              WOL_SB, Segoe UI Semibold, Segoe UI, Tahoma, sans-serif;
+            font-weight: 400;
+            color: #fc6154;
+          }
+        }
+        .login_right_part_remember_password_wrap {
+          position: relative;
+          width: 5.41rem;
+          height: 0.9rem;
+          left: 50%;
+          -webkit-transform: translate(-50%, 0%);
+          -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+          top: 2rem;
+          display: flex;
+          align-items: center;
+          .login_right_part_remember_password_square {
+            background: rgba(255, 255, 255, 1);
+            border-radius: 2px;
+            border: 1px solid rgba(217, 226, 232, 1);
+            margin-left: 0.1rem;
+          }
+
+          .login_right_part_remember_password {
+            margin-left: 0.1rem;
+            font-size: 0.16rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+          }
+        }
+
+        .div_username_password_false {
+          .div_username_password_false(
+            100,
+            520,
+            16
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .div_username_password_false(@hhh,@ttt,@fff) {
+            height: @hhh / 100rem;
+            min-height: @hhh / 1px * @rate;
+            // position: absolute;
+            // left: @lll / 100rem;
+            top: @ttt / 100rem;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            font-size: @fff / 100rem;
+            color: #fc6154;
+            font-family: PingFang SC, Helvetica Neue, Helvetica, STHeitiSC-Light,
+              WOL_SB, Segoe UI Semibold, Segoe UI, Tahoma, sans-serif;
+            font-weight: 400;
+          }
+        }
+        .login_right_part_unauthorized {
+          font-size: 0.16rem;
+          font-family: PingFang SC, Helvetica Neue, Helvetica, STHeitiSC-Light,
+            WOL_SB, Segoe UI Semibold, Segoe UI, Tahoma, sans-serif;
+          font-weight: 400;
+          color: #fc6154;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          top: 5.1rem;
+        }
+        .login_right_part_btn {
+          .login_right_part_btn(
+            540,
+            54,
+            81,
+            610
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_btn(@www,@hhh,@lll,@ttt) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            background: rgba(0, 127, 255, 1);
+            border-radius: 4px;
+            font-size: 0.22rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            border: none;
+          }
+        }
+      }
+      .login_right_part_face_login_div {
+        width: 7rem;
+        height: 8rem;
+        float: left;
+        background: rgba(255, 255, 255, 1);
+        position: absolute;
+        right: 0;
+        .login_right_part_face_login_div_left_tip {
+          margin-left: 20px;
+          margin-top: 20px;
+          width: 220px;
+          display: flex;
+          justify-content: space-evenly;
+          > a:nth-child(2) {
+            height: 22px;
+            border-bottom: 1px solid #1890ff;
+          }
+        }
+        #right_tip {
+          // background: #000;
+          position: absolute;
+          right: 50px;
+          top: 10px;
+        }
+        .login_right_part_face_login_div_desc_div {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          font-size: 0.3rem;
+          font-weight: 500;
+          margin-top: 0.3rem;
+          color: rgba(81, 202, 0, 1);
+          letter-spacing: 1px;
+        }
+        .login_first {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          bottom: 40px;
+          color: blue;
+          cursor: pointer;
+        }
+        .face_to_login_div {
+          width: 0.7rem;
+          height: 0.7rem;
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-image: url(../img/Login/face_to_login1.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        .face_to_login_div_hide {
+          border-style: solid;
+          border-width: 0px 0px 0.7rem 0.7rem;
+          border-color: transparent transparent white transparent;
+          width: 0px;
+          height: 0px;
+          transform: rotate(90deg);
+          position: absolute;
+          right: 0;
+          top: 0;
+          cursor: pointer;
+        }
+
+        .login_right_part_face_login_div_border1 {
+          width: 1rem;
+          height: 0.05rem;
+          background: #21b249;
+          position: absolute;
+          left: 1.8rem;
+          top: 2.3rem;
+        }
+        .login_right_part_face_login_div_border2 {
+          width: 1rem;
+          height: 0.05rem;
+          background: #21b249;
+          position: absolute;
+          left: 2.8rem;
+          top: 2.3rem;
+        }
+        .login_right_part_face_login_div_border3 {
+          width: 1.3rem;
+          height: 0.05rem;
+          background: #21b249;
+          position: absolute;
+          left: 0.9rem;
+          top: 5.45rem;
+        }
+        .login_right_part_face_login_div_border4 {
+          width: 1.3rem;
+          height: 0.05rem;
+          background: #21b249;
+          position: absolute;
+          left: 4.8rem;
+          top: 5.45rem;
+        }
+        .login_right_part_face_login_div_border5 {
+          width: 0.05rem;
+          height: 1.3rem;
+          background: #21b249;
+          position: absolute;
+          left: 0.9rem;
+          top: 1.5rem;
+        }
+        .login_right_part_face_login_div_border6 {
+          width: 0.05rem;
+          height: 1.3rem;
+          background: #21b249;
+          position: absolute;
+          left: 0.9rem;
+          top: 4.2rem;
+        }
+        .login_right_part_face_login_div_border7 {
+          width: 0.05rem;
+          height: 1.3rem;
+          background: #21b249;
+          position: absolute;
+          left: 6.1rem;
+          top: 1.5rem;
+        }
+        .login_right_part_face_login_div_border8 {
+          width: 0.05rem;
+          height: 1.3rem;
+          background: #21b249;
+          position: absolute;
+          left: 6.1rem;
+          top: 4.2rem;
+        }
+      }
+      .login_right_part_register {
+        position: absolute;
+        top: -0.25rem;
+        .login_right_part_register_word1 {
+          .login_right_part_register_word1(
+            100,
+            100,
+            193,
+            55,
+            22
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_register_word1(@www,@hhh,@lll,@ttt,@fff) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            font-size: @fff / 100rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+          }
+        }
+
+        .login_right_part_register_line {
+          .login_right_part_register_line(
+            270,
+            8,
+            80,
+            94
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_register_line(@www,@hhh,@lll,@ttt) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            border-bottom: 1px solid #d9e2e8;
+          }
+        }
+
+        .login_right_part_register_word2 {
+          .login_right_part_register_word2(
+            100,
+            100,
+            463,
+            55,
+            22
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_register_word2(@www,@hhh,@lll,@ttt,@fff) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            font-size: @fff / 100rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(0, 127, 255, 1);
+          }
+        }
+
+        .login_right_part_register_line2 {
+          .login_right_part_register_line2(
+            270,
+            10,
+            350,
+            94
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_register_line2(@www,@hhh,@lll,@ttt) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            background-image: url(../img/Login/line.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+        .login_right_part_register_input_template_wrap {
+          .login_right_part_register_input_template1 {
+            .login_right_part_register_input_template(
+              "../img/Login/people.png"
+            );
+            margin-top: 0.75rem;
+          }
+          .login_right_part_register_input_template2 {
+            .login_right_part_register_input_template("../img/Login/phone.png");
+          }
+          .login_right_part_register_input_template3 {
+            .login_right_part_register_input_template("../img/Login/email.png");
+          }
+          .login_right_part_register_input_template4 {
+            .login_right_part_register_input_template(
+              "../img/Login/password.png"
+            );
+          }
+          .login_right_part_register_input_template5 {
+            .login_right_part_register_input_template(
+              "../img/Login/password.png"
+            );
+          }
+
+          .login_right_part_register_input_template (@imgUrl) {
+            .login_right_part_register_input_template(
+              540,
+              45,
+              90,
+              80,
+              55
+            ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+            .login_right_part_register_input_template(@www,@hhh,@lll,@ttt,@mt) {
+              width: @www / 100rem;
+              height: @hhh / 100rem;
+              min-width: @www / 1px * @rate;
+              min-height: @hhh / 1px * @rate;
+              position: relative;
+              left: @lll / 100rem;
+              top: @ttt / 100rem;
+              margin-top: @mt / 100rem;
+            }
+
+            .login_right_part_register_must_write {
+              .login_right_part_register_must_write(
+                10,
+                10,
+                -20,
+                8
+              ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+              .login_right_part_register_must_write(@www,@hhh,@lll,@ttt) {
+                width: @www / 100rem;
+                height: @hhh / 100rem;
+                min-width: @www / 1px * @rate;
+                min-height: @hhh / 1px * @rate;
+                position: absolute;
+                left: @lll / 100rem;
+                top: @ttt / 100rem;
+                background-image: url(../img/Login/must.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+
+            .login_right_part_register_input_icon {
+              .login_right_part_register_input_icon(
+                16,
+                18,
+                0,
+                5
+              ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+              .login_right_part_register_input_icon(@www,@hhh,@lll,@ttt) {
+                width: @www / 100rem;
+                height: @hhh / 100rem;
+                min-width: @www / 1px * @rate;
+                min-height: @hhh / 1px * @rate;
+                position: absolute;
+                left: @lll / 100rem;
+                top: @ttt / 100rem;
+                // background-image: url(../img/Login/people.png);
+                background-image: url(@imgUrl);
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+            .login_right_part_register_input_icon_email {
+              width: 0.18rem;
+              height: 0.13rem;
+              background-size: 0.18rem 0.13rem;
+              margin-left: -0.03rem;
+            }
+            .login_right_part_register_input::-webkit-input-placeholder {
+              color: rgba(204, 222, 235, 1);
+              font-size: 0.18rem;
+            }
+            .login_right_part_register_input {
+              .login_right_part_register_input(
+                480,
+                25,
+                30,
+                0
+              ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+              .login_right_part_register_input(@www,@hhh,@lll,@ttt) {
+                width: @www / 100rem;
+                height: @hhh / 100rem;
+                min-width: @www / 1px * @rate;
+                min-height: @hhh / 1px * @rate;
+                position: absolute;
+                left: @lll / 100rem;
+                top: @ttt / 100rem;
+                border: 0; // 去除未选中状态边框
+                outline: none; // 去除选中状态边框
+                background-color: rgba(0, 0, 0, 0); // 透明背景
+              }
+            }
+            .login_right_part_register_input_cuowu {
+              .login_right_part_register_input_cuowu(
+                16,
+                16,
+                5
+              ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+              .login_right_part_register_input_cuowu(@www,@hhh,@mt) {
+                width: @www / 100rem;
+                height: @hhh / 100rem;
+                min-width: @www / 1px * @rate;
+                min-height: @hhh / 1px * @rate;
+                float: right;
+                margin-top: @mt / 100rem;
+              }
+            }
+
+            .login_right_part_register_border {
+              .login_right_part_register_border(
+                536,
+                2,
+                -7,
+                43
+              ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+              .login_right_part_register_border(@www,@hhh,@lll,@ttt) {
+                width: @www / 100rem;
+                height: @hhh / 100rem;
+                min-width: @www / 1px * @rate;
+                min-height: @hhh / 1px * @rate;
+                position: absolute;
+                left: @lll / 100rem;
+                top: @ttt / 100rem;
+                border-bottom: 1px solid #d9e2e8;
+              }
+            }
+
+            .login_right_part_input_warning {
+              .login_right_part_input_warning(
+                100,
+                0,
+                50,
+                16
+              ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+              .login_right_part_input_warning(@hhh,@lll,@ttt,@fff) {
+                height: @hhh / 100rem;
+                min-height: @hhh / 1px * @rate;
+                position: absolute;
+                left: @lll / 100rem;
+                top: @ttt / 100rem;
+                font-size: @fff / 100rem;
+                font-family: PingFang SC, Helvetica Neue, Helvetica,
+                  STHeitiSC-Light, WOL_SB, Segoe UI Semibold, Segoe UI, Tahoma,
+                  sans-serif;
+                font-weight: 400;
+                color: #fc6154;
+              }
+            }
+
+            .login_right_part_register_input_template_describe {
+              .login_right_part_register_input_template_describe(
+                500,
+                30,
+                0,
+                50,
+                16
+              ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+              .login_right_part_register_input_template_describe(@www,@hhh,@lll,@ttt,@fff) {
+                width: @www / 100rem;
+                height: @hhh / 100rem;
+                min-width: @www / 1px * @rate;
+                min-height: @hhh / 1px * @rate;
+                position: relative;
+                left: @lll / 100rem;
+                top: @ttt / 100rem;
+                font-size: @fff / 100rem;
+                width: 407px;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: rgba(51, 51, 51, 1);
+              }
+            }
+          }
+        }
+
+        .login_right_part_register_agreement_wrap {
+          width: 5rem;
+          height: 0.3rem;
+          position: relative;
+          left: 0.9rem;
+          top: 1.35rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .login_right_part_register_square {
+            width: 0.18rem;
+            height: 0.18rem;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 2px;
+            border: 1px solid rgba(217, 226, 232, 1);
+            position: relative;
+            margin-top: -0.03rem;
+          }
+          .login_right_part_register_agreement {
+            width: 5.3rem;
+            height: 0.3rem;
+            font-size: 0.16rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            margin-left: 0.1rem;
+          }
+        }
+
+        .login_right_part_register_agreement_warn {
+          font-size: 0.16rem;
+          font-family: PingFang SC, Helvetica Neue, Helvetica, STHeitiSC-Light,
+            WOL_SB, Segoe UI Semibold, Segoe UI, Tahoma, sans-serif;
+          font-weight: 400;
+          color: #fc6154;
+          position: absolute;
+          left: 50%;
+          top: 7rem;
+        }
+        .login_right_part_register_btn {
+          .login_right_part_register_btn(
+            540,
+            54,
+            80,
+            735,
+            22
+          ); //宽度，高度，左偏移量,右偏移量(单位是px，会自动转换为rem,1rem=100px,这个转换在js中)
+          .login_right_part_register_btn(@www,@hhh,@lll,@ttt,@fff) {
+            width: @www / 100rem;
+            height: @hhh / 100rem;
+            min-width: @www / 1px * @rate;
+            min-height: @hhh / 1px * @rate;
+            position: absolute;
+            left: @lll / 100rem;
+            top: @ttt / 100rem;
+            background: rgba(0, 127, 255, 1);
+            border-radius: 4px;
+            font-size: @fff / 100rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+    }
+  }
+
+  .video-js {
+    width: 648px !important;
+    height: 364px !important;
+  }
+
+  .yl-ai-home {
+    .user {
+      width: 34px;
+      height: 34px;
+      background-image: url(../../assets/img/Login/gerenzhongxin@2x.png);
+      background-size: contain;
+      position: absolute;
+      right: 20px;
+      top: 36px;
+      // margin-left: 40px;
+      z-index: 10;
+    }
+    .toast_toast {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1000;
+      .Navigate_div_modify_password {
+        width: 420px;
+        height: 320px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 4px;
+        position: absolute;
+        top: 90px;
+        right: 19px;
+        .Navigate_div_modify_password_word {
+          font-size: 18px;
+          width: 75px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: rgba(0, 127, 255, 1);
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 20px;
+        }
+        .Navigate_div_modify_password_img {
+          width: 360px;
+          height: 8px;
+          background-image: url(../../assets/img/home/lin1.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10px;
+        }
+        .Navigate_div_modify_password_icon_Navigate_div_modify_password_input_wrap {
+          width: 360px;
+          height: 63px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          position: relative;
+          .Navigate_div_modify_password_icon {
+            width: 16px;
+            height: 19px;
+            background-image: url(../../assets/img/Login/密码.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+          }
+          .Navigate_div_modify_password_input::-webkit-input-placeholder {
+            font-size: 18px;
+          }
+          .Navigate_div_modify_password_input {
+            width: 300px;
+            height: 20px;
+            display: inline-block;
+            border: 0; // 去除未选中状态边框
+            outline: none; // 去除选中状态边框
+            background-color: rgba(0, 0, 0, 0); // 透明背景
+            color: black;
+          }
+          .Navigate_div_modify_password_line {
+            width: 361px;
+            height: 1px;
+            background-color: #ffd9e2e8;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+
+        .Navigate_div_modify_password_warn {
+          height: 20px;
+          font-size: 16px;
+          color: #fc6154;
+
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0%);
+          top: 205px;
+        }
+        .Navigate_div_modify_password_btn_wrap {
+          width: 361px;
+          height: 44px;
+          position: relative;
+          left: 50%;
+          margin-top: 60px;
+          transform: translate(-50%, 0);
+        }
+        .Navigate_div_modify_password_confirm {
+          width: 173px;
+          height: 44px;
+          background: rgba(0, 127, 255, 1);
+          border-radius: 4px;
+          float: left;
+        }
+        .Navigate_div_modify_password_cancel {
+          width: 173px;
+          height: 44px;
+          background: rgba(184, 200, 216, 1);
+          border-radius: 4px;
+          position: relative;
+          float: right;
+        }
+      }
+    }
+
+    .div_logout_modify_password {
+      width: 135px;
+      height: 80px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 2px;
+      color: #26ffffff;
+      position: absolute;
+      right: 19px;
+      top: 80px;
+      .div_logout_modify_password_up_wrap {
+        width: 100%;
+        height: 50%;
+      }
+      .div_logout_modify_password_icon_logout {
+        width: 16px;
+        height: 16px;
+        background-image: url(../../assets/img/header/logout.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 20px;
+        top: 12px;
+      }
+
+      .div_logout_modify_password_icon_logout_word {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        height: 50%;
+        color: rgba(255, 255, 255, 0.7);
+        cursor: pointer;
+        .wenzi1 {
+          height: 100%;
+          position: absolute;
+          left: 60px;
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+        }
+      }
+      .div_logout_modify_password_logout_hover {
+        width: 100%;
+        height: 50%;
+        background: rgba(0, 86, 121, 1);
+        color: #fff;
+        position: absolute;
+      }
+
+      .div_logout_modify_password_icon_modify_password {
+        width: 16px;
+        height: 16px;
+        background-image: url(../../assets/img/header/modify.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 20px;
+        top: 50px;
+      }
+      .div_logout_modify_password_icon_modify_password_word {
+        width: 126%;
+        height: 50%;
+        position: absolute;
+        left: 0px;
+        top: 48%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        .wenzi2 {
+          height: 100%;
+          position: absolute;
+          left: 60px;
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+        }
+      }
+      .div_logout_modify_password_modify_password_hover {
+        width: 100%;
+        height: 50%;
+        background: rgba(0, 86, 121, 1);
+        color: #fff;
+        position: absolute;
+        top: 50%;
+      }
+    }
+    .yl-ai-home-banner {
+      height: 594px;
+      padding-top: 242px;
+      padding-left: 35px;
+      text-align: center;
+      background: url(../img/aiBanner/homeBanner.png) no-repeat;
+      background-size: cover;
+      position: relative;
+      .yl-ai-home-banner-txt {
+        text-align: initial;
+        display: inline-block;
+        width: 1200px;
+
+        .yl-ai-home-banner-title {
+          //   width: 340px;
+          height: 68px;
+          font-size: 48px;
+          font-family: PingFangSC;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 1);
+          line-height: 68px;
+
+          margin-bottom: 42px;
+        }
+
+        .yl-ai-home-banner-desc {
+          width: 711px;
+          height: 108px;
+          font-size: 18px;
+          font-family: PingFangSC;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 1);
+          line-height: 36px;
+          text-shadow: 0px 2px 4px rgba(0, 99, 160, 0.5);
+        }
+
+        .yl-ai-home-img {
+          width: 1033px;
+          height: 517px;
+          position: absolute;
+          top: 77px;
+          right: 30px;
+          background: url(https://yl-gateway.oss-cn-beijing.aliyuncs.com/aiMarket/AI.png)
+            no-repeat;
+        }
+      }
+
+      .yl-ai-home-banner-max-width {
+        text-align: initial;
+        width: 1200px;
+        display: inline-block;
+
+        .yl-ai-home-banner-title {
+          position: absolute;
+          z-index: 1;
+        }
+
+        .yl-ai-home-banner-desc {
+          top: 352px;
+          position: absolute;
+          z-index: 1;
+        }
+
+        .yl-ai-home-img {
+          position: absolute;
+        }
+      }
+    }
+
+    .yl-ai-home-container {
+      text-align: center;
+      background: #f5f8fa;
+
+      .yl-ai-container-panel {
+        width: 1200px;
+        display: inline-block;
+        text-align: initial;
+        margin-top: 36px;
+
+        .yl-ai-container-panel-title {
+          height: 46px;
+          font-size: 28px;
+          font-family: PingFangSC;
+          font-weight: 500;
+          color: rgba(0, 43, 95, 1);
+          line-height: 28px;
+          background: url(../../assets/img/home/titleIcon.png) 0px 0 no-repeat;
+          background-size: 42px 46px;
+          margin-bottom: 18px;
+          margin-left: -20px;
+          padding-left: 19px;
+          padding-top: 6px;
+
+          &.nlp-title {
+            margin-top: 32px;
+          }
+        }
+
+        .yl-ai-ability-list {
+          display: flex;
+          width: 1200px;
+          flex-wrap: wrap;
+          text-align: initial;
+
+          .yl-ai-ability-item {
+            cursor: pointer;
+            width: 388px;
+            height: 309px;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 2px;
+            border: 1px solid rgba(233, 233, 233, 1);
+            margin-right: 18px;
+            margin-bottom: 24px;
+
+            &:nth-child(3) {
+              margin-right: 0px;
+            }
+
+            &:nth-child(6) {
+              margin-right: 0px;
+            }
+
+            .yl-ai-ability-item-banner {
+              //   width: 388px;
+              width: 100%;
+              height: 160px;
+            }
+
+            .yl-ai-ability-item-panel {
+              padding: 20px 24px 14px;
+              box-sizing: border-box;
+
+              .yl-ai-ability-item-title {
+                height: 24px;
+                font-size: 16px;
+                font-family: PingFangSC;
+                font-weight: 500;
+                color: rgba(0, 31, 69, 0.85);
+                line-height: 24px;
+                margin-bottom: 16px;
+              }
+
+              .yl-ai-ability-item-desc {
+                width: 340px;
+                height: 44px;
+                font-size: 14px;
+                font-family: PingFangSC;
+                font-weight: 400;
+                color: rgba(0, 43, 95, 0.45);
+                line-height: 22px;
+                margin-bottom: 14px;
+              }
+
+              .yl-ai-ability-item-link {
+                height: 17px;
+                font-size: 12px;
+                font-family: PingFangSC;
+                font-weight: 400;
+                color: rgba(84, 152, 255, 1);
+                line-height: 17px;
+                text-align: right;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .yl-ai-nlp-list {
+          display: flex;
+          width: 1200px;
+          flex-wrap: wrap;
+          text-align: initial;
+
+          .yl-ai-nlp-item {
+            width: 388px;
+            height: 309px;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 2px;
+            border: 1px solid rgba(233, 233, 233, 1);
+            margin-right: 18px;
+            margin-bottom: 24px;
+
+            &:nth-child(3) {
+              margin-right: 0px;
+            }
+
+            &:nth-child(6) {
+              margin-right: 0px;
+            }
+
+            .yl-ai-nlp-item-banner {
+              width: 388px;
+              height: 160px;
+            }
+
+            .yl-ai-nlp-item-panel {
+              padding: 20px 24px 14px;
+              box-sizing: border-box;
+
+              .yl-ai-nlp-item-title {
+                height: 24px;
+                font-size: 16px;
+                font-family: PingFangSC;
+                font-weight: 500;
+                color: rgba(0, 31, 69, 0.85);
+                line-height: 24px;
+                margin-bottom: 16px;
+              }
+
+              .yl-ai-nlp-item-desc {
+                width: 340px;
+                height: 44px;
+                font-size: 14px;
+                font-family: PingFangSC;
+                font-weight: 400;
+                color: rgba(0, 43, 95, 0.45);
+                line-height: 22px;
+                margin-bottom: 14px;
+              }
+
+              .yl-ai-nlp-item-link {
+                height: 17px;
+                font-size: 12px;
+                font-family: PingFangSC;
+                font-weight: 400;
+                color: rgba(84, 152, 255, 1);
+                line-height: 17px;
+                text-align: right;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .yl-ai-footer {
+      text-align: center;
+      background: rgba(20, 26, 34, 1);
+      height: 202px;
+      min-width: 1200px;
+
+      .yl-ai-container {
+        text-align: initial;
+        display: inline-block;
+        min-width: 1200px;
+        max-width: 1200px;
+      }
+
+      .yl-ai-cooperation-company {
+        margin: 50px auto 40px;
+
+        img {
+          cursor: pointer;
+        }
+
+        .ant-divider {
+          margin: 0 11px;
+          background: #999;
+        }
+
+        .yl-company-icon {
+          width: 82px;
+          height: 24px;
+        }
+
+        .unicom-company-icon {
+          width: 73px;
+          height: 24px;
+        }
+
+        .aliyun-company-icon {
+          width: 71px;
+          height: 16px;
+        }
+      }
+
+      .yl-ai-relevant-information {
+        display: flex;
+
+        .yl-ai-relevant-information-operation {
+          & > div {
+            color: #999;
+            margin-right: 20px;
+            display: inline-block;
+            cursor: pointer;
+
+            a {
+              color: #999;
+
+              &:hover,
+              &:active {
+                color: #5498ff;
+              }
+            }
+          }
+
+          // .yl-ai-about-us {}
+        }
+
+        .yl-ai-icp {
+          flex: 1;
+          text-align: right;
+          color: #999;
+
+          a {
+            margin: 0 10px;
+            color: #999;
+          }
+
+          img {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .video-js {
+      width: 698px;
+    }
+
+    .ant-upload-list {
+      display: none !important;
+    }
+
+    .ant-upload {
+      border: none !important;
+    }
+
+    #video {
+      position: absolute;
+      left: -1000px;
+    }
+
+    #canvas {
+      position: absolute;
+      left: -3000px;
+      // width: 150px;
+      // height: 50px;
+    }
+
+    .yl-ai-body-container {
+      text-align: center;
+      background: #fff;
+      display: block;
+      height: auto;
+      .yl-ai-body-banner {
+        width: 100%;
+        height: 594px;
+        padding-top: 210px;
+        padding-left: 35px;
+        text-align: center;
+        background-size: cover;
+        background: url("../img/faceRecognition/backgroundImg.png") no-repeat;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+
+        &.yl-ai-HumanRecognitionTracking {
+          background: url("https://yl-gateway.oss-cn-beijing.aliyuncs.com/aiMarket/HumanRecognitionTracking/banner.png")
+            no-repeat;
+          background-size: cover;
+        }
+
+        &.yl-ai-motorVehicleRecognition {
+          background: url("https://yl-gateway.oss-cn-beijing.aliyuncs.com/aiMarket/MotorVehicleRecognition/banner.png")
+            no-repeat;
+          background-size: cover;
+        }
+
+        &.yl-ai-vehicleLicensePlateRecognition {
+          background: url("https://yl-gateway.oss-cn-beijing.aliyuncs.com/aiMarket/VehicleLicensePlateRecognition/bannerImg.png")
+            no-repeat;
+          background-size: cover;
+        }
+
+        &.yl-ai-nonMotorVehicleRecognition {
+          background: url("https://yl-gateway.oss-cn-beijing.aliyuncs.com/aiMarket/NonMotorVehicleRecognition/bannerImg.png")
+            no-repeat;
+          background-size: cover;
+        }
+
+        &.yl-ai-cross-lens {
+          background: url("https://yl-gateway.oss-cn-beijing.aliyuncs.com/aiMarket/cross-lens/bannerImg.png")
+            no-repeat;
+          background-size: cover;
+        }
+
+        &.yl-ai-industryOCRRecognitionAlgorithms {
+          background: url("https://yl-gateway.oss-cn-beijing.aliyuncs.com/aiMarket/industryOcr/bannerImg.png")
+            no-repeat;
+          background-size: cover;
+        }
+
+        .yl-ai-banner-opicity {
+          max-width: 1680px;
+          background: url(../img/faceRecognition/backgroundOpcity.png) no-repeat;
+          background-size: 1680px 594px;
+          height: 594px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          max-width: 1680px;
+          width: 100%;
+        }
+
+        .yl-ai-banner-txt {
+          color: #fff;
+          width: 1200px;
+          display: inline-block;
+          position: inherit;
+          text-align: initial;
+
+          .yl-ai-banner-title {
+            height: 98px;
+            font-size: 48px;
+            font-family: PingFangSC;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 1);
+            line-height: 98px;
+
+            margin-bottom: 20px;
+          }
+
+          .yl-ai-banner-desc {
+            width: 509px;
+            height: 90px;
+            font-size: 18px;
+            font-family: PingFangSC;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            line-height: 30px;
+            text-shadow: 0px 2px 4px rgba(91, 91, 91, 0.5);
+          }
+        }
+      }
+
+      .yl-ai-body-container {
+        text-align: center;
+        height: 40px;
+        font-size: 28px;
+        font-family: PingFangSC;
+        font-weight: 500;
+        color: rgba(0, 43, 95, 1);
+        line-height: 40px;
+        margin-top: 80px;
+        display: inline-block;
+        display: block;
+        height: auto;
+
+        .yl-ai-body-container-panel {
+          display: inline-block;
+          width: 100%;
+          .margin_top_change {
+            margin-top: -35px;
+          }
+          .margin_to_bottom {
+            margin-top: 10px;
+          }
+          .yl-ai-body-max-width {
+            // max-width: 1200px;
+            width: 1200px;
+            display: inline-block;
+            .TopSixtyFive {
+              margin-top: 65px;
+            }
+            .yl-ai-humanRecognitionTracking-scene {
+              text-align: initial;
+              display: flex;
+              justify-content: space-between;
+              .yl-ai-humanRecognitionTracking-scene-title {
+                height: 46px;
+                font-size: 22px;
+                font-family: PingFangSC;
+                font-weight: 500;
+                color: rgba(0, 43, 95, 1);
+                line-height: 28px;
+                background: url(../../assets/img/home/titleIcon.png) 0px 0
+                  no-repeat;
+                background-size: 42px 46px;
+                margin-left: -20px;
+                padding-left: 19px;
+                padding-top: 6px;
+                margin-bottom: 64px;
+              }
+              .WidthMax {
+                width: 100% !important;
+              }
+              .RightZero {
+                margin-right: 0px !important;
+              }
+              .HeightAuto {
+                height: auto !important;
+              }
+              .yl-ai-humanRecognitionTracking-scene-desc {
+                // width: 265px;
+                height: 71px;
+                font-size: 14px;
+                font-family: PingFangSC;
+                font-weight: 400;
+                color: rgba(36, 54, 75, 1);
+                line-height: 22px;
+                // margin-right: 198px;
+                margin-right: 160px;
+                width: 300px;
+                .to_face_project_a {
+                  width: 64px;
+                  height: 16px;
+                  font-size: 16px;
+                  font-family: SourceHanSansCN-Bold, SourceHanSansCN;
+                  font-weight: bold;
+                  color: rgba(48, 175, 215, 1);
+                  line-height: 24px;
+                }
+                .to_face_project_a_icon {
+                  background-image: url(../img/faceRecognition/more1.png);
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  width: 12px;
+                  height: 12px;
+                  display: inline-block;
+                  margin-left: 8px;
+                }
+              }
+
+              .yl-ai-humanRecognitionTracking-scene-video {
+                width: 648px;
+                height: 364px;
+                .video-js .vjs-big-play-button {
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+
+              .yl-ai-humanRecognitionTracking-scene-img {
+                text-align: center;
+                position: relative;
+
+                .scene-img {
+                  left: 73px;
+                  position: absolute;
+                  width: 648px;
+                  height: 364px;
+                  display: inline-block;
+                  z-index: 1;
+                }
+
+                .base-bg1 {
+                  margin-top: 332px;
+                  width: 792px;
+                  height: 49px;
+                  background: rgba(235, 240, 248, 1);
+                  box-shadow: 0px 3px 3px 0px rgba(248, 251, 255, 1);
+                  width: 792px;
+                  overflow: hidden;
+                  text-align: initial;
+                  position: relative;
+
+                  &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    margin-left: -50px;
+                    border-right: 25px solid transparent;
+                    border-left: 50px solid transparent;
+                    border-top: 50px solid #fff;
+                  }
+
+                  &::after {
+                    position: absolute;
+                    content: "";
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    top: 0;
+                    right: 0;
+                    border-right: 0px solid transparent;
+                    border-left: 25px solid transparent;
+                    border-top: 50px solid #fff;
+                  }
+                }
+
+                .base-bg2 {
+                  width: 792px;
+                  height: 18px;
+                  background: linear-gradient(
+                    180deg,
+                    rgba(246, 248, 254, 1) 0%,
+                    rgba(235, 240, 248, 1) 100%
+                  );
+                }
+              }
+            }
+          }
+
+          &.yl-ai-example-panel {
+            background: #f5f8fa;
+            height: 736px;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 80px;
+
+            .yl-ai-wait-example {
+              width: 220px;
+
+              img {
+                width: 220px;
+                height: 118px;
+              }
+
+              .yl-ai-wait-example-txt {
+                height: 17px;
+                font-size: 12px;
+                font-family: PingFangSC;
+                font-weight: 400;
+                color: rgba(149, 153, 160, 1);
+                line-height: 17px;
+                margin-top: 12px;
+              }
+            }
+
+            .yl-ai-examples {
+              display: flex;
+              text-align: initial;
+              justify-content: center;
+              .yl-ai-example {
+                .yl-ai-examples-copyWriting {
+                  font-size: 14px;
+                  font-family: PingFangSC;
+                  font-weight: 400;
+                  color: #24364b;
+                  margin-top: 20px;
+                  max-width: 539px;
+                  // text-indent: 15px;
+                  line-height: 22px;
+                }
+                .yl-ai-example-title {
+                  height: 46px;
+                  font-size: 28px;
+                  font-family: PingFangSC;
+                  font-weight: 500;
+                  color: rgba(0, 43, 95, 1);
+                  line-height: 28px;
+                  background: url(../../assets/img/home/titleIcon.png) 0px 0
+                    no-repeat;
+                  background-size: 42px 46px;
+                  margin-bottom: 18px;
+                  margin-left: -20px;
+                  padding-left: 19px;
+                  padding-top: 6px;
+                  margin-bottom: 31px;
+                  &.title-h1 {
+                    font-size: 28px;
+                  }
+
+                  &.title-h2 {
+                    font-size: 22px;
+                  }
+                }
+
+                .yl-ai-example-double-desc {
+                  margin-top: -20px;
+                  font-size: 16px;
+                  color: #3d4966;
+                  text-indent: 32px;
+                }
+                .yl-ai-example-image {
+                  margin-top: 25px;
+                }
+                img {
+                  width: 539px;
+                }
+
+                &:first-child {
+                  margin-right: 122px;
+                }
+
+                &:last-child {
+                  margin-right: 0px;
+                }
+              }
+            }
+          }
+
+          &.yl-ai-body-app-scene {
+            height: 694px;
+            padding-top: 80px;
+            background: #fff;
+          }
+
+          &.yl-ai-example-empty {
+            height: 439px;
+          }
+
+          .yl-ai-body-title {
+            margin-bottom: 65px;
+            height: 40px;
+            font-size: 28px;
+            font-family: PingFangSC;
+            font-weight: 500;
+            color: rgba(0, 43, 95, 1);
+            line-height: 40px;
+          }
+
+          .yl-ai-body-subtitle {
+            height: 22px;
+            font-size: 12px;
+            font-family: PingFangSC;
+            font-weight: 400;
+            color: rgba(0, 43, 95, 0.45);
+            line-height: 22px;
+          }
+
+          .yl-ai-body-source {
+            margin-top: 46px;
+
+            div {
+              cursor: pointer;
+              display: inline-block;
+              font-size: 14px;
+              width: 98px;
+              height: 32px;
+              background: rgba(255, 255, 255, 1);
+              border-radius: 4px;
+              border: 1px solid rgba(0, 185, 239, 1);
+              color: #00b9ef;
+              text-align: center;
+              line-height: 32px;
+
+              &:first-child {
+                margin-right: 12px;
+              }
+            }
+          }
+
+          .yl-ai-body-primary-subtitle {
+            width: 558px;
+            height: 71px;
+            font-size: 14px;
+            font-family: PingFangSC;
+            font-weight: 400;
+            color: rgba(0, 43, 95, 1);
+            line-height: 22px;
+          }
+
+          .yl-ai-face-scene {
+            margin-top: 61px;
+            width: 552px;
+            height: 425px;
+            background: url(https://yl-gateway.oss-cn-beijing.aliyuncs.com/aiMarket/faceRecogition/applyExample1.png)
+              no-repeat;
+            background-size: 100% 100%;
+          }
+
+          .yl-ai-body-introduces {
+            display: flex;
+            width: 1200px;
+            flex-wrap: wrap;
+            text-align: initial;
+
+            .yl-ai-body-introduce {
+              flex: 1;
+              max-width: 50%;
+              display: flex;
+              padding-left: 100px;
+
+              .yl-ai-body-introduce-icon {
+                width: 48px;
+                height: 48px;
+                margin-right: 23px;
+
+                img {
+                  width: 48px;
+                  height: 48px;
+                }
+              }
+
+              .yl-ai-body-introduce-text {
+                flex: 1;
+
+                .yl-ai-body-introduce-title {
+                  height: 28px;
+                  font-size: 20px;
+                  font-family: PingFangSC;
+                  font-weight: 600;
+                  color: rgba(0, 43, 95, 1);
+                  line-height: 28px;
+                  margin-bottom: 8px;
+                }
+
+                .yl-ai-body-introduce-desc {
+                  width: 420px;
+                  height: 110px;
+                  font-size: 14px;
+                  font-family: PingFangSC;
+                  font-weight: 400;
+                  color: rgba(36, 54, 75, 1);
+                  line-height: 22px;
+                }
+              }
+            }
+          }
+          .centerC {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .Top110 {
+            margin-top: 110px !important;
+          }
+          .yl-ai-body-test {
+            margin-top: 80px;
+            display: flex;
+            width: max-content;
+            position: relative;
+
+            .yl-ai-body-test-title {
+              color: #fff;
+              font-size: 12px;
+              background: url("https://yl-gateway.oss-cn-beijing.aliyuncs.com/aiMarket/faceRecogition/lineToLine.png")
+                no-repeat;
+              position: absolute;
+              margin-left: 216px;
+              background-size: 100%;
+              width: 300px;
+              height: 40px;
+
+              span {
+                display: inline-block;
+                line-height: 22px;
+                position: absolute;
+                margin-left: -10px;
+              }
+
+              &.contrast-result {
+                height: 70px;
+                margin-top: -30px;
+                background-position-y: 30px;
+
+                .contrast-result-value {
+                  font-size: 20px;
+                  display: inline-block;
+                  line-height: 22px;
+                  position: absolute;
+                  color: #00b9ef;
+                  left: 130px;
+                }
+
+                .contrast-result-txt {
+                  margin-top: 30px;
+                  left: 142px;
+                }
+              }
+            }
+
+            .yl-ai-body-test-panel {
+              flex: 1;
+
+              &.first-child {
+                margin-right: 64px;
+              }
+
+              .ant-upload-drag {
+                background: transparent;
+                border-color: transparent;
+              }
+
+              .ant-upload-list {
+                display: none;
+              }
+
+              .yl-ai-body-test-panel-title {
+                width: 340px;
+                height: 20px;
+                font-size: 14px;
+                font-family: PingFangSC;
+                font-weight: 500;
+                color: rgba(0, 31, 69, 0.85);
+                line-height: 20px;
+                text-align: center;
+                margin-bottom: 43px;
+              }
+
+              .yl-ai-body-test-panel-upload {
+                width: 340px;
+                height: 320px;
+                background: rgba(241, 252, 255, 1);
+                border-radius: 4px;
+                border: 1px solid #00b9ef;
+                .show {
+                  background-color: white;
+                  font-size: 14px;
+                  width: 250px;
+                  height: 150px;
+                  line-height: 150px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  display: block;
+                  animation: show-item 5s infinite ease-in forwards;
+                  z-index: 2000;
+                }
+                .yl-ai-body-test-panel-upload-before {
+                  color: #00b9ef;
+
+                  .ant-upload-text {
+                    color: #00b9ef;
+                    .anticon {
+                      margin-right: 3px;
+                    }
+                  }
+                  // .ant-upload-drag {
+                  //     background: black;
+                  //     padding-top: 139px;
+
+                  // .popup{
+                  //     width: 250px;
+                  //     height: 150px;
+                  //     line-height: 150px;
+                  //     position: absolute;top: 50%;left: 50%;transform:translate(-50%,-50%);
+                  //     z-index: 1000;
+                  //     display: block;
+                  // }
+                  .ant-upload-button {
+                    display: flex;
+                    justify-content: center;
+                    button {
+                      color: #fff;
+                      margin-top: 70px;
+                      width: 186px;
+                      height: 32px;
+                      background: rgba(0, 185, 239, 1);
+                      border-radius: 4px;
+                      border: 1px solid rgba(0, 185, 239, 1);
+                    }
+                  }
+                  .ant-upload-button-describe {
+                    width: 195px;
+                    height: 34px;
+                    font-size: 12px;
+                    font-family: PingFangSC-Regular, PingFang SC;
+                    font-weight: 400;
+                    color: rgba(140, 161, 183, 1);
+                    line-height: 17px;
+                    position: relative;
+                    left: 50%;
+                    transform: translate(-50%, 0%);
+                    top: 5px;
+                    margin-left: 5px;
+                    text-align: left;
+                  }
+                }
+
+                .upload-preview {
+                  width: 340px;
+                  height: 320px;
+                  position: relative;
+                  .show {
+                    background-color: white;
+                    font-size: 14px;
+                    width: 250px;
+                    height: 150px;
+                    line-height: 150px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: block;
+                    animation: show-item 5s infinite ease-in forwards;
+                    z-index: 2000;
+                  }
+                  .hide {
+                    animation: hide-item 1s ease-in forwards;
+                  }
+                  .preview-del-icon {
+                    display: none;
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.7);
+                    width: 100%;
+                    height: 100%;
+
+                    .anticon {
+                      cursor: pointer;
+                      margin-top: 146px;
+                    }
+                  }
+
+                  &:hover {
+                    .preview-del-icon {
+                      display: block;
+                    }
+                  }
+                  #uploadFile_canvas,
+                  #uploadFile_canvasB {
+                    position: absolute;
+                  }
+                  #the_left_img,
+                  #the_left_imgB {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                }
+              }
+
+              // &:first-child {}
+            }
+          }
+
+          .yl-ai-body-test-simple {
+            width: 1200px;
+            // height: 666px;
+            // margin-top: 48px;
+            display: flex;
+            .yl-ai-body-test-simple_content {
+              width: 1004px;
+              height: 502px;
+              margin-left: 100px;
+              background: #ebebeb;
+            }
+            .yl-ai-body-test-simple-left {
+              flex: 1;
+
+              .yl-ai-body-text-simple-img-change {
+                width: 100%;
+                height: 502px;
+                position: relative;
+                overflow: hidden;
+                background-color: #343434;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .yl-ai-body-text-simple-img-change-toast {
+                  width: 1004px;
+                  height: 60px;
+                  background: rgba(0, 0, 0, 0.5);
+                  position: absolute;
+                  bottom: 0px;
+                  .human_uoload_img {
+                    position: absolute;
+                    left: 30px;
+                    top: 14px;
+                  }
+                  .yl-ai-body-text-simple-imgs-message {
+                    position: absolute;
+                    left: 130px;
+                    top: 10px;
+                    font-size: 14px;
+                    color: white;
+                  }
+                }
+
+                .scan-panel {
+                  width: 673px;
+                  height: 502px;
+                  background: linear-gradient(
+                    89deg,
+                    rgba(84, 152, 255, 0) 0%,
+                    rgba(79, 164, 255, 0.23) 53%,
+                    rgba(75, 175, 255, 0.67) 100%
+                  );
+                  position: absolute;
+                  z-index: 1;
+                  animation: mymove 1s forwards infinite;
+                }
+
+                .yl-ai-check-button {
+                  width: 98px;
+                  height: 32px;
+                  background: rgba(0, 185, 239, 1);
+                  border-radius: 4px;
+                  border: none;
+                  position: absolute;
+                  bottom: 12px;
+                  left: 12px;
+                  font-size: 14px;
+                  color: #fff;
+                  line-height: 32px;
+                  z-index: 1;
+                  cursor: pointer;
+                }
+                .uploadedImg {
+                  max-width: 100%;
+                  max-height: 100%;
+                }
+                .warining {
+                  background-color: white;
+                  font-size: 14px;
+                  width: 250px;
+                  height: 150px;
+                  line-height: 150px;
+                  word-wrap: break-word;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  display: block;
+                  animation: show-item 5s infinite ease-in forwards;
+                  z-index: 2000;
+                }
+                #myCanvas {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+                .img-change-preview {
+                  width: 100%;
+                  background-position-x: center !important;
+                  background-position-y: center !important;
+                  background-size: contain !important;
+                  height: 502px;
+                  // background-color: #333 !important;
+                }
+              }
+
+              .yl-ai-body-text-simple-imgs {
+                width: 1004px;
+                // height: 161px;
+                // height: 240px;
+                // background: rgba(48, 48, 48, 1);
+                background: #ebebeb;
+                display: flex;
+                // padding: 12px 4px 11px;
+                position: relative;
+                padding: 10px 30px 10px 30px;
+                .swiper-button-prev {
+                  margin-left: -5px;
+                  outline: none;
+                  //   --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
+                  //   --swiper-navigation-color: #00ff33;/* 单独设置按钮颜色 */
+                  --swiper-navigation-size: 30px; /* 设置按钮大小 */
+                }
+                .swiper-button-next {
+                  margin-right: -5px;
+                  outline: none;
+                  //   --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
+                  //   --swiper-navigation-color: #00ff33;/* 单独设置按钮颜色 */
+                  --swiper-navigation-size: 30px; /* 设置按钮大小 */
+                }
+                .yl-ai-body-text-simple-img {
+                  //   width: 238px;
+                  //   height: 138px;
+                  //   border: 2px solid transparent;
+                  box-sizing: border-box;
+                  overflow: hidden;
+                  margin-right: 11px;
+                  cursor: pointer;
+                  &:last-child {
+                    margin-right: 0px;
+                  }
+
+                  &:hover {
+                    border: 2px solid #00b9ef;
+                  }
+
+                  img {
+                    width: 238px;
+                    height: 138px;
+                  }
+                }
+              }
+            }
+
+            .yl-ai-body-test-simple-right {
+              overflow: auto;
+              width: 197px;
+              height: 660px;
+              background: rgba(245, 248, 250, 1);
+              border-radius: 2px;
+              padding: 56px 0px 0px 26px;
+              text-align: initial;
+
+              .yl-ai-body-test-result-line {
+                margin-bottom: 16px;
+                min-height: 20px;
+                line-height: 20px;
+                font-size: 12px;
+                font-family: PingFangSC;
+                font-weight: 400;
+                color: rgba(0, 31, 69, 0.85);
+                .needFloatLeft {
+                  float: left;
+                }
+                img {
+                  width: 16px;
+                  height: 16px;
+                  float: left;
+                  margin-left: 10px;
+                }
+
+                span {
+                  display: inline-block;
+                  margin-left: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
